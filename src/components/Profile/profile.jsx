@@ -1,8 +1,6 @@
 import React from 'react'
 import css from './profile.module.css'
-import user from "./user.json";
 
-const statsName = Object.keys(user.stats);
 
 const Profile = ({ username, tag, location, avatar, stats }) => (
     <div className={css.profile}>
@@ -18,20 +16,19 @@ const Profile = ({ username, tag, location, avatar, stats }) => (
 
     <ul className={css.stats}>
         <li className={css.item}>
-          <span className={css.label}>{statsName[0]}</span>
+          <span className={css.label}>Followers</span>
         <span className={css.quantity}>{stats.followers}</span>
         </li>
         <li className={css.item}>
-          <span className={css.label}>{statsName[1]}</span>
+          <span className={css.label}>Views</span>
           <span className={css.quantity}>{stats.views}</span>
         </li>
         <li className={css.item}>
-          <span className={css.label}>{statsName[2]}</span>
+          <span className={css.label}>Likes</span>
           <span className={css.quantity}>{stats.likes}</span>
         </li>
       </ul>
     </div>
   )
-
 
 export default Profile

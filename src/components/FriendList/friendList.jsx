@@ -1,16 +1,16 @@
+import FriendItem from './friendListItem'
 import React from 'react'
 import friendsCss from './friendList.module.css'
 
 const FriendList = ({friends}) => {
   return (
     <ul className={friendsCss.friendList}>
-      {friends.map((el) =>
-        <li className={`${el.isOnline?friendsCss.itemTrue:friendsCss.itemFalse}`} key={el.id}>
-          <span className={friendsCss.status}>{el.isOnline}</span>
-          <img className="avatar" src={el.avatar} alt="avatar" width={75} />
-          <p className={friendsCss.name}>{el.name}</p>
-        </li>
-      )}
+      {friends.map((el) => (
+        <FriendItem
+          key={el.id}
+          friend={el}
+        />
+      ))}
     </ul>
   )
 }
