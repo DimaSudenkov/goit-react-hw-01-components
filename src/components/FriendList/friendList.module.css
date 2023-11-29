@@ -1,0 +1,13 @@
+.friendList {}
+
+.itemFalse {
+  color: rgb(255, 0, 0);
+}
+
+.itemTrue {
+  color: rgb(0, 255, 0);
+}
+
+.name {
+  color: black;
+}
